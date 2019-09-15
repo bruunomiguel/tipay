@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="author" content="harrnish" />
+
+    <title>Me contrata, tipay!</title>
+    <link rel="icon" href="favicon.png" type="image/x-icon">
+
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!--bootstrap-->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!-- google fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto+Mono:100,100i,300,300i,400,400i,500,500i,700,700i"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <nav>
+        <span id="brand">
+          <a href="index.html">tipay</a>
+        </span>
+
+        <ul id="menu">
+          <li>
+            <a href="index.html">home<span>.</span></a>
+          </li>
+          <li>
+            <a href="#">login<span>.</span></a>
+          </li>
+          <li>
+            <a href="#">contato<span>.</span></a>
+          </li>
+        </ul>
+
+        <div id="toggle">
+          <div class="span">menu</div>
+        </div>
+      </nav>
+
+      <div id="resize">
+        <div class="close-btn">close</div>
+
+        <ul id="menu">
+          <li>
+            <a href="index.html">home<span>.</span></a>
+          </li>
+          <li>
+            <a href="about.html">login<span>.</span></a>
+          </li>
+          <li>
+            <a href="contact.html">contato<span>.</span></a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="hero">
+        <div class="header">
+          <h1 class="line anim-typewriter">Olá, nós somos a tipay.</h1>
+        </div>
+      </div>
+
+      <div class="scroll-down"></div>
+
+      <div class="container-fluid">
+        <br /><br /><br />
+
+        <form class="formulario container">
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Email</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Senha</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1">
+                </div>
+                <a href="transacoes.html" class="btn btn-dark">login</a>
+
+              </form>
+        <div class="vertical"></div>
+        <br />
+
+        <div class="footer">
+                <div class="container">
+                  <br /><br />
+        
+                  <br />
+        
+                  <div class="hr">
+                    <div class="row"></div>
+                  </div>
+        
+                  <br /><br />
+        
+                  <div class="info">
+                    <div class="row">
+                      <div class="col-lg-4" id="personal">
+                        <p>conecte-se com a gente!</p>
+                        <h4>ig @tipay.app</h4>
+                        <br /><br />
+                      </div>
+        
+                      <div class="col-lg-4" id="media">
+                        <p>nos siga</p>
+        
+                        <ul>
+                          <li id="fb">fb</li>
+                          <li id="ig">ig</li>
+                        </ul>
+        
+                        <br /><br />
+                      </div>
+        
+                      <div class="col-lg-4" id="address">
+                        <p>diga oi!</p>
+                        <h4>
+                          atendimento@tipay.app
+                        </h4>
+                        <br /><br />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        
+              <br /><br /><br /><br />
+            </div>
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+        
+            <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+            <script type="text/javascript">
+        
+              $("#toggle").click(function() {
+                $(this).toggleClass("on");
+                $("#resize").toggleClass("active");
+              });
+              $("#resize ul li a").click(function() {
+                $(this).toggleClass("on");
+                $("#resize").toggleClass("active");
+              });
+              $(".close-btn").click(function() {
+                $(this).toggleClass("on");
+                $("#resize").toggleClass("active");
+              });
+        
+              TweenMax.from("#brand", 1, {
+                delay: 0.4,
+                y: 10,
+                opacity: 0,
+                ease: Expo.easeInOut
+              });
+              TweenMax.staggerFrom(
+                "#menu li a",
+                1,
+                {
+                  delay: 0.4,
+                  opacity: 0,
+                  ease: Expo.easeInOut
+                },
+                0.1
+              );
+        
+            </script>
+          </body>
+        </html>
